@@ -1,10 +1,12 @@
 # test-problem
 online url: https://cyanxxx.github.io/test-problem/
-因为部署在https，所以无法直接访问到http的资源
 
-## 如何本地调试运行
-`npm i` 安装依赖
-`npm run dev` 启动项目
+Note: Because it is deployed on https, it cannot directly access http resources.
 
-## 如何不build直接运行
-切换到 `gh-pages` 分支，确保index.html是包含在test-problem文件夹里面，以test-problem文件夹为根路径启动一个静态服务器
+## How to run project in local
+`npm i` install dependencies
+`npm run dev` run project
+
+## How to run project directly without build
+switch to `gh-pages` branch and make sure that index.html is contained in the `test-problem` folder, and start a static server with the `test-problem` folder as the root path
+
