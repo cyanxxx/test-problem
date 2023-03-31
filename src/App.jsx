@@ -84,11 +84,18 @@ function App() {
 
   return (
     <div>
-      <form className="email-form" onSubmit={handleSubmit(onSubmit)}>
-        
-        <input {...registerEmail} />
-        <input type='number' {...registerZipCode} />
-        <input type="submit" value="Add email" />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="email-form">
+          <label htmlFor='email-field' className='email'>
+            Email
+            <input id="email-field"{...registerEmail} />
+          </label>
+          <label id="zipcode-field" className='zipcode'>
+            ZipCode
+            <input id='zipcode-field' type='number' {...registerZipCode} />
+          </label>
+          <input className="submit-btn" type="submit" value="Add email" />
+        </div>
 
         <div className='error-msg'>
           {errors.email && <p role="alert">{errors.email?.message}</p>}
