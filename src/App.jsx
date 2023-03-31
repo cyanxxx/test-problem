@@ -7,10 +7,11 @@ import Table from './components/table'
 import './App.css'
 
 import { ZipCodeService } from './service/zip-code-service';
+import { MOCK_DATA } from './service/mock-data';
 
 function App() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const [data, setData] = useState([])
+  const [data, setData] = useState(MOCK_DATA)
 
   const onSubmit = async (data, e) => {
     const city = await ZipCodeService.getInstance().getCode(data.zipCode)
